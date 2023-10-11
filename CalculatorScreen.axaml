@@ -1,0 +1,60 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="350" Background="#4F4557" Foreground="#F4EEE0"
+                x:Class="CalculatorQuest.CalculatorScreen">
+    <Window.Styles>
+        <Style Selector="Button.ButStyle">
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Background" Value="#393646"/>
+            <Setter Property="Opacity" Value="50"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0.5"/>
+            <Setter Property="Foreground" Value="#F4EEE0"/>
+        </Style>
+    </Window.Styles>
+    <StackPanel HorizontalAlignment="Center" Orientation="Vertical">
+        <Label HorizontalContentAlignment="Left" x:Name="Operation" Content="Operation"/>
+        <Label HorizontalContentAlignment="Right" x:Name="Result" Content="Result"/>
+        <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Button Classes="ButStyle" x:Name="Zero" Grid.Row="6" Grid.Column="1" Content="0"/>
+        <Button Classes="ButStyle" x:Name="One" Grid.Row="3" Grid.Column="0" Content="1"/>
+        <Button Classes="ButStyle" x:Name="Two" Grid.Row="3" Grid.Column="1" Content="2"/>
+        <Button Classes="ButStyle" x:Name="Three" Grid.Row="3" Grid.Column="2" Content="3"/>
+        <Button Classes="ButStyle" x:Name="Four" Grid.Row="4" Grid.Column="0" Content="4"/>
+        <Button Classes="ButStyle" x:Name="Five" Grid.Row="4" Grid.Column="1" Content="5"/>
+        <Button Classes="ButStyle" x:Name="Six" Grid.Row="4" Grid.Column="2" Content="6"/>
+        <Button Classes="ButStyle" x:Name="Seven" Grid.Row="5" Grid.Column="0" Content="7"/>
+        <Button Classes="ButStyle" x:Name="Eight" Grid.Row="5" Grid.Column="1" Content="8"/>
+        <Button Classes="ButStyle" x:Name="Nine" Grid.Row="5" Grid.Column="2" Content="9"/>
+        <Button Classes="ButStyle" x:Name="More" Grid.Row="2" Grid.Column="1" Content="+"/>
+        <Button Classes="ButStyle" x:Name="Less" Grid.Row="2" Grid.Column="2" Content="-"/>
+        <Button Classes="ButStyle" x:Name="Divide" Grid.Row="1" Grid.Column="1" Content="/"/>
+        <Button Classes="ButStyle" x:Name="Multiply" Grid.Row="1" Grid.Column="2" Content="x"/>
+        <Button Classes="ButStyle" x:Name="Mod" Grid.Row="1" Grid.Column="0" Content="%"/>
+        <Button Classes="ButStyle" x:Name="Point" Grid.Row="6" Grid.Column="0" Content="."/>
+        <Button Classes="ButStyle" x:Name="ClearAll" Grid.Row="0" Grid.Column="0" Content="C"/>
+        <Button Classes="ButStyle" x:Name="ClearEntry" Grid.Row="0" Grid.Column="1" Content="CE"/>
+        <Button Classes="ButStyle" x:Name="Del" Grid.Row="0" Grid.Column="2" Content="Del"/>
+        <Button Classes="ButStyle" x:Name="Equal" Grid.Row="6" Grid.Column="2" Content="="/>
+        <Button Classes="ButStyle" x:Name="Sign" Grid.Row="2" Grid.Column="0" Content="+/-"/>
+    </Grid>
+    </StackPanel>
+</Window>
