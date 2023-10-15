@@ -2,25 +2,45 @@
                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="350" Background="#4F4557" Foreground="#F4EEE0"
+                mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="350" Background="#393646" Foreground="#F4EEE0"
                 x:Class="CalculatorQuest.CalculatorScreen">
     <Window.Styles>
-        <Style Selector="Button.ButStyle">
+        <Style Selector="Button.ButStyle1">
             <Setter Property="Width" Value="50"/>
             <Setter Property="Height" Value="30"/>
-            <Setter Property="Background" Value="#393646"/>
-            <Setter Property="Opacity" Value="50"/>
+            <Setter Property="Background" Value="#4F4557"/>
+            <Setter Property="Opacity" Value="65"/>
             <Setter Property="FontWeight" Value="Normal"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="Margin" Value="0.5"/>
             <Setter Property="Foreground" Value="#F4EEE0"/>
         </Style>
+        <Style Selector="Button.ButStyle2">
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Background" Value="#6D5D6E"/>
+            <Setter Property="Opacity" Value="65"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0.5"/>
+            <Setter Property="Foreground" Value="#F4EEE0"/>
+        </Style>
+        <Style Selector="Button.ButStyle3">
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Background" Value="#F4EEE0"/>
+            <Setter Property="Opacity" Value="65"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0.5"/>
+            <Setter Property="Foreground" Value="#393646"/>
+        </Style>
     </Window.Styles>
     <StackPanel HorizontalAlignment="Center" Orientation="Vertical">
-        <Label HorizontalContentAlignment="Left" x:Name="Operation" Content="Operation"/>
-        <Label HorizontalContentAlignment="Right" x:Name="Result" Content="Result"/>
+        <Label HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="10" x:Name="Operation" Content=""/>
+        <Label HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="16" x:Name="Result" Content="0"/>
         <Grid>
-        <Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
@@ -34,27 +54,33 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Button Classes="ButStyle" x:Name="Zero" Grid.Row="6" Grid.Column="1" Content="0"/>
-        <Button Classes="ButStyle" x:Name="One" Grid.Row="3" Grid.Column="0" Content="1"/>
-        <Button Classes="ButStyle" x:Name="Two" Grid.Row="3" Grid.Column="1" Content="2"/>
-        <Button Classes="ButStyle" x:Name="Three" Grid.Row="3" Grid.Column="2" Content="3"/>
-        <Button Classes="ButStyle" x:Name="Four" Grid.Row="4" Grid.Column="0" Content="4"/>
-        <Button Classes="ButStyle" x:Name="Five" Grid.Row="4" Grid.Column="1" Content="5"/>
-        <Button Classes="ButStyle" x:Name="Six" Grid.Row="4" Grid.Column="2" Content="6"/>
-        <Button Classes="ButStyle" x:Name="Seven" Grid.Row="5" Grid.Column="0" Content="7"/>
-        <Button Classes="ButStyle" x:Name="Eight" Grid.Row="5" Grid.Column="1" Content="8"/>
-        <Button Classes="ButStyle" x:Name="Nine" Grid.Row="5" Grid.Column="2" Content="9"/>
-        <Button Classes="ButStyle" x:Name="More" Grid.Row="2" Grid.Column="1" Content="+"/>
-        <Button Classes="ButStyle" x:Name="Less" Grid.Row="2" Grid.Column="2" Content="-"/>
-        <Button Classes="ButStyle" x:Name="Divide" Grid.Row="1" Grid.Column="1" Content="/"/>
-        <Button Classes="ButStyle" x:Name="Multiply" Grid.Row="1" Grid.Column="2" Content="x"/>
-        <Button Classes="ButStyle" x:Name="Mod" Grid.Row="1" Grid.Column="0" Content="%"/>
-        <Button Classes="ButStyle" x:Name="Point" Grid.Row="6" Grid.Column="0" Content="."/>
-        <Button Classes="ButStyle" x:Name="ClearAll" Grid.Row="0" Grid.Column="0" Content="C"/>
-        <Button Classes="ButStyle" x:Name="ClearEntry" Grid.Row="0" Grid.Column="1" Content="CE"/>
-        <Button Classes="ButStyle" x:Name="Del" Grid.Row="0" Grid.Column="2" Content="Del"/>
-        <Button Classes="ButStyle" x:Name="Equal" Grid.Row="6" Grid.Column="2" Content="="/>
-        <Button Classes="ButStyle" x:Name="Sign" Grid.Row="2" Grid.Column="0" Content="+/-"/>
+            <Button Classes="ButStyle2"   x:Name="Zero" Grid.Row="6" Grid.Column="1" Click="ButtClick" Content="0"/>
+            <Button Classes="ButStyle2"  x:Name="One" Grid.Row="3" Grid.Column="0" Click="ButtClick" Content="1"/>
+            <Button Classes="ButStyle2"  x:Name="Two" Grid.Row="3" Grid.Column="1" Click="ButtClick" Content="2"/>
+            <Button Classes="ButStyle2"  x:Name="Three" Grid.Row="3" Grid.Column="2" Click="ButtClick" Content="3"/>
+            <Button Classes="ButStyle2"  x:Name="Four" Grid.Row="4" Grid.Column="0" Click="ButtClick" Content="4"/>
+            <Button Classes="ButStyle2"  x:Name="Five" Grid.Row="4" Grid.Column="1" Click="ButtClick" Content="5"/>
+            <Button Classes="ButStyle2"  x:Name="Six" Grid.Row="4" Grid.Column="2" Click="ButtClick" Content="6"/>
+            <Button Classes="ButStyle2"  x:Name="Seven" Grid.Row="5" Grid.Column="0" Click="ButtClick" Content="7"/>
+            <Button Classes="ButStyle2"  x:Name="Eight" Grid.Row="5" Grid.Column="1" Click="ButtClick" Content="8"/>
+            <Button Classes="ButStyle2"  x:Name="Nine" Grid.Row="5" Grid.Column="2" Click="ButtClick" Content="9"/>
+            <Button Classes="ButStyle1"  x:Name="More" Grid.Row="2" Grid.Column="1" Click="ButtClick" Content="+"/>
+            <Button Classes="ButStyle1"  x:Name="Less" Grid.Row="2" Grid.Column="2" Click="ButtClick" Content="-"/>
+            <Button Classes="ButStyle1"  x:Name="Divide" Grid.Row="1" Grid.Column="1" Click="ButtClick" Content="/"/>
+            <Button Classes="ButStyle1"  x:Name="Multiply" Grid.Row="1" Grid.Column="2" Click="ButtClick" Content="*">
+                <Button.Template>
+                    <ControlTemplate>
+                        <TextBlock Classes="ButStyle1" TextAlignment="Center" Text="x" FontSize="16" Foreground="#F4EEE0" Background="#4F4557"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Classes="ButStyle1"  x:Name="Mod" Grid.Row="1" Grid.Column="0" Click="ButtClick" Content="%"/>
+            <Button Classes="ButStyle2"  x:Name="Point" Grid.Row="6" Grid.Column="0" Click="ButtClick" Content="."/>
+            <Button Classes="ButStyle1"  x:Name="ClearAll" Grid.Row="0" Grid.Column="0" Click="ButtSupprAll" Content="C"/>
+            <Button Classes="ButStyle1"  x:Name="ClearEntry" Grid.Row="0" Grid.Column="1" Click="ButtSupprOp" Content="CE"/>
+            <Button Classes="ButStyle1"  x:Name="Del" Grid.Row="0" Grid.Column="2" Click="ButtSuppr1b1" Content="Del"/>
+            <Button Classes="ButStyle3"  x:Name="Equal" Grid.Row="6" Grid.Column="2" Click="ButtSend" Content="="/>
+            <Button Classes="ButStyle1"  x:Name="Sign" Grid.Row="2" Grid.Column="0" Click="ButtChangeSign" Content="+/-"/>
     </Grid>
     </StackPanel>
 </Window>
